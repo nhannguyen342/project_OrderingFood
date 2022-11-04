@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC "-//ApacheSoftware Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name ="baseLayout" 
+                template="/WEB-INF/layout/base.jsp">
+                <put-attribute name ="title" value="..."/>
+                <put-attribute name ="header" value="/WEB-INF/layout/header.jsp"/>
+                <put-attribute name ="footer" value="/WEB-INF/layout/footer.jsp"/>
+                <put-attribute name ="content" value="BASE" />
+    </definition>
+    <definition name="index" extends="baseLayout" >
+        <put-attribute name="title" value="Trang chu" />
+        <put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    <definition name="food" extends="baseLayout" >
+        <put-attribute name="title" value="QUAN LY MON AN" />
+        <put-attribute name="content" value="/WEB-INF/jsp/food.jsp" />
+    </definition>
+    <definition name="login" extends="baseLayout" >
+        <put-attribute name="title" value="DANG NHAP" />
+        <put-attribute name="content" value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+    <definition name="register" extends="baseLayout" >
+        <put-attribute name="title" value="DANG KY" />
+        <put-attribute name="content" value="/WEB-INF/jsp/register.jsp" />
+    </definition>
+    <definition name="food-detail" extends="baseLayout" >
+        <put-attribute name="title" value="CHI TIET SAN PHAM" />
+        <put-attribute name="content" value="/WEB-INF/jsp/food-detail.jsp" />
+    </definition>
+    <definition name="cart" extends="baseLayout" >
+        <put-attribute name="title" value="GIO HANG" />
+        <put-attribute name="content" value="/WEB-INF/jsp/cart.jsp" />
+    </definition>
+    
+    <definition name ="baseAdminLayout" 
+                template="/WEB-INF/layout/base-admin.jsp">
+                <put-attribute name ="title" value="Quan tri he thong dat mon an"/>
+                <put-attribute name ="left" value="/WEB-INF/layout/admin-left.jsp"/>
+                <put-attribute name ="footer" value="/WEB-INF/layout/admin-footer.jsp"/>
+                <put-attribute name ="content" value="..." />
+    </definition>
+    <definition name="restaurant-state" extends="baseAdminLayout" >
+        <put-attribute name="title" value="Thong ke mon an theo danh muc nha hang" />
+        <put-attribute name="content" value="/WEB-INF/jsp/restaurant-stats.jsp" />
+    </definition>
+</tiles-definitions>
+
